@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -65,7 +65,7 @@ if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 rm -f /home/needupdate > /dev/null 2>&1
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | grep $MYIP | awk '{print $3}')
 fi
 clear
 echo -e "\e[36m╒════════════════════════════════════════════════════╕\033[0m"
@@ -130,7 +130,7 @@ echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
 echo -e "\e[36m╒════════════════════════════════════════════════════╕\033[0m"
 echo ""
 echo -e "[ \033[0;31mChangelog\033[0m ]"
-curl -sS https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/clgshow
+curl -sS https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/clgshow
 echo -e "
 "
 fi
@@ -176,7 +176,7 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
     fi
 else
     if [[ $x -eq 999 ]]; then
-       wget -q -O /usr/bin/update-script "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
+       wget -q -O /usr/bin/update-script "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/dll/system/update-script.sh" && chmod +x /usr/bin/update-script
        screen -S upds update-script
        menu
     elif [[ $x -eq 1 ]]; then

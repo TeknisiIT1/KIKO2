@@ -110,23 +110,23 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/dll/bbr.sh && chmod +x set-br.sh && ./set-br.sh
-wget https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/ins-sshws.sh && chmod +x ins-sshws.sh && ./ins-sshws.sh
+wget https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/dll/bbr.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/ins-sshws.sh && chmod +x ins-sshws.sh && ./ins-sshws.sh
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install BOT XOLPANEL              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 #install ohp
-wget https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+wget https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
