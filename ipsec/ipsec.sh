@@ -7,7 +7,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -25,7 +25,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -42,7 +42,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -362,19 +362,19 @@ mkdir -p /run/pluto > /dev/null 2>&1
 service fail2ban restart > /dev/null 2>&1
 service ipsec restart > /dev/null 2>&1
 service xl2tpd restart > /dev/null 2>&1
-wget -q -O /usr/bin/add-l2tp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
-wget -q -O /usr/bin/del-l2tp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
-wget -q -O /usr/bin/add-pptp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/add-pptp.sh && chmod +x /usr/bin/add-pptp
-wget -q -O /usr/bin/del-pptp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/del-pptp.sh && chmod +x /usr/bin/del-pptp
-wget -q -O /usr/bin/renew-pptp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
-wget -q -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
-wget -q -O /usr/bin/trial-pptp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/trial-pptp.sh && chmod +x /usr/bin/trial-pptp
-wget -q -O /usr/bin/trial-l2tp https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ipsec/trial-l2tp.sh && chmod +x /usr/bin/trial-l2tp
+wget -q -O /usr/bin/add-l2tp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/add-l2tp.sh && chmod +x /usr/bin/add-l2tp
+wget -q -O /usr/bin/del-l2tp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/del-l2tp.sh && chmod +x /usr/bin/del-l2tp
+wget -q -O /usr/bin/add-pptp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/add-pptp.sh && chmod +x /usr/bin/add-pptp
+wget -q -O /usr/bin/del-pptp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/del-pptp.sh && chmod +x /usr/bin/del-pptp
+wget -q -O /usr/bin/renew-pptp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/renew-pptp.sh && chmod +x /usr/bin/renew-pptp
+wget -q -O /usr/bin/renew-l2tp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/renew-l2tp.sh && chmod +x /usr/bin/renew-l2tp
+wget -q -O /usr/bin/trial-pptp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/trial-pptp.sh && chmod +x /usr/bin/trial-pptp
+wget -q -O /usr/bin/trial-l2tp https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ipsec/trial-l2tp.sh && chmod +x /usr/bin/trial-l2tp
 
 touch /var/lib/scrz-prem/data-user-l2tp > /dev/null 2>&1
 touch /var/lib/scrz-prem/data-user-pptp > /dev/null 2>&1
 
-wget -q -O /usr/bin/ipsec-menu "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/menu_all/ipsec-menu.sh" && chmod +x /usr/bin/ipsec-menu
+wget -q -O /usr/bin/ipsec-menu "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/menu_all/ipsec-menu.sh" && chmod +x /usr/bin/ipsec-menu
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
