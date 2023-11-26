@@ -7,7 +7,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -25,7 +25,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -42,7 +42,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -527,26 +527,26 @@ sudo netfilter-persistent save >/dev/null 2>&1
 sudo netfilter-persistent reload >/dev/null 2>&1
 cd 
 # download script
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/usernew.sh" && chmod +x /usr/bin/usernew
-wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/trial.sh" && chmod +x /usr/bin/trial
-wget -q -O /usr/bin/hapus "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/hapus.sh" && chmod +x /usr/bin/hapus
-wget -q -O /usr/bin/member "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/member.sh" && chmod +x /usr/bin/member
-wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/delete.sh" && chmod +x /usr/bin/delete
-wget -q -O /usr/bin/cek "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/cek.sh" && chmod +x /usr/bin/cek
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/restart.sh" && chmod +x /usr/bin/restart
-wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/renew.sh" && chmod +x /usr/bin/renew
-wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/autokill.sh" && chmod +x /usr/bin/autokill
-wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/ceklim.sh" && chmod +x /usr/bin/ceklim
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/tendang.sh" && chmod +x /usr/bin/tendang
-wget -q -O /usr/bin/port-dropbear "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/port-dropbear.sh" && chmod +x /usr/bin/port-dropbear
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/port-ssl "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/port-ssl.sh" && chmod +x /usr/bin/port-ssl
-wget -q -O /usr/bin/banner "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/banner/banner.sh" && chmod +x /usr/bin/banner
-wget -q -O /usr/bin/sshws "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/ins-sshws.sh" && chmod +x /usr/bin/sshws
-wget -q -O /usr/bin/ssh-menu "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/menu_all/ssh-menu.sh" && chmod +x /usr/bin/ssh-menu
-wget -q -O /usr/bin/port-wssl "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/port-ws-ssl.sh" && chmod +x /usr/bin/port-wssl
-wget -q -O /usr/bin/asu "https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/ssh/asu.sh" && chmod +x /usr/bin/asu
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/usernew.sh" && chmod +x /usr/bin/usernew
+wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/trial.sh" && chmod +x /usr/bin/trial
+wget -q -O /usr/bin/hapus "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/hapus.sh" && chmod +x /usr/bin/hapus
+wget -q -O /usr/bin/member "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/member.sh" && chmod +x /usr/bin/member
+wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/delete.sh" && chmod +x /usr/bin/delete
+wget -q -O /usr/bin/cek "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/cek.sh" && chmod +x /usr/bin/cek
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/restart.sh" && chmod +x /usr/bin/restart
+wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/renew.sh" && chmod +x /usr/bin/renew
+wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/autokill.sh" && chmod +x /usr/bin/autokill
+wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/ceklim.sh" && chmod +x /usr/bin/ceklim
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/tendang.sh" && chmod +x /usr/bin/tendang
+wget -q -O /usr/bin/port-dropbear "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/port-dropbear.sh" && chmod +x /usr/bin/port-dropbear
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/port-ssl "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/port-ssl.sh" && chmod +x /usr/bin/port-ssl
+wget -q -O /usr/bin/banner "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/banner/banner.sh" && chmod +x /usr/bin/banner
+wget -q -O /usr/bin/sshws "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/ins-sshws.sh" && chmod +x /usr/bin/sshws
+wget -q -O /usr/bin/ssh-menu "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/menu_all/ssh-menu.sh" && chmod +x /usr/bin/ssh-menu
+wget -q -O /usr/bin/port-wssl "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/port-ws-ssl.sh" && chmod +x /usr/bin/port-wssl
+wget -q -O /usr/bin/asu "https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/ssh/asu.sh" && chmod +x /usr/bin/asu
 
 
 cat > /etc/cron.d/re_otm <<-END

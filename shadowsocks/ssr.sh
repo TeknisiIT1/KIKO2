@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/valkry7/Regist/MONSTER/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/TeknisiIT1/izinkiko2/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -199,7 +199,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/core/ssr-core.sh /etc/init.d/ssrmu 
+	https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/core/ssr-core.sh /etc/init.d/ssrmu 
 	systemctl daemon-reload > /dev/null 2>&1
 	systemctl restart ssrmu > /dev/null 2>&1
 }
@@ -237,10 +237,10 @@ Start_SSR
 }
 Install_SSR
 systemctl restart ssrmu > /dev/null 2>&1
-wget -q -O /usr/bin/add-ssr https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/shadowsocks/add-ssr.sh && chmod +x /usr/bin/add-ssr
-wget -q -O /usr/bin/del-ssr https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/shadowsocks/del-ssr.sh && chmod +x /usr/bin/del-ssr
-wget -q -O /usr/bin/renew-ssr https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/shadowsocks/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
-wget -q -O /usr/bin/trial-ssr https://raw.githubusercontent.com/valkry7/ARCHER/MONSTER/shadowsocks/trial-ssr.sh && chmod +x /usr/bin/trial-ssr
+wget -q -O /usr/bin/add-ssr https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/shadowsocks/add-ssr.sh && chmod +x /usr/bin/add-ssr
+wget -q -O /usr/bin/del-ssr https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/shadowsocks/del-ssr.sh && chmod +x /usr/bin/del-ssr
+wget -q -O /usr/bin/renew-ssr https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/shadowsocks/renew-ssr.sh && chmod +x /usr/bin/renew-ssr
+wget -q -O /usr/bin/trial-ssr https://raw.githubusercontent.com/TeknisiIT1/KIKO2/main/shadowsocks/trial-ssr.sh && chmod +x /usr/bin/trial-ssr
 touch /usr/local/shadowsocksr/akun.conf
 
 sleep 1
